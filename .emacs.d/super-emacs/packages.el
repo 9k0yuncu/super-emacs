@@ -7,7 +7,6 @@
   '(helm
     multiple-cursors
     ace-jump-mode
-    powerline
     switch-window
     buffer-move
     auto-complete
@@ -19,7 +18,8 @@
     which-key
     meta-presenter
     myterminal-controls
-    theme-looper))
+    theme-looper
+    golden-ratio))
 
 ;Install required packages
 (mapc (lambda (p)
@@ -49,11 +49,6 @@
   "Ace jump back:-"
   t)
 
-;Enable powerline
-(powerline-center-theme)
-(setq powerline-default-separator
-      'slant)
-
 ;Configure theme-looper
 (theme-looper-set-theme-set '(deeper-blue
                               wheatgrass
@@ -71,3 +66,6 @@
 (helm-autoresize-mode 1)
 (setq helm-split-window-in-side-p
       t)
+
+(setq neo-theme 'arrow)
+(neotree)
