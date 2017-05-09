@@ -19,7 +19,8 @@
     meta-presenter
     myterminal-controls
     theme-looper
-    golden-ratio))
+    golden-ratio
+    projectile))
 
 ;Install required packages
 (mapc (lambda (p)
