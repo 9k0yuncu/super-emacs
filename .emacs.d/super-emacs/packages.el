@@ -70,3 +70,8 @@
 
 (setq neo-theme 'arrow)
 (neotree)
+(setq neo-smart-open t)
+
+(golden-ratio-mode 1)
+(projectile-mode 1)
+(setq projectile-switch-project-action 'neotree-projectile-action)
