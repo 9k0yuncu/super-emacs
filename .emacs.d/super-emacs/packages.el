@@ -20,7 +20,8 @@
     myterminal-controls
     theme-looper
     golden-ratio
-    projectile))
+    projectile
+    magit))
 
 ;Install required packages
 (mapc (lambda (p)
