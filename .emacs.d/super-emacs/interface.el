@@ -8,8 +8,10 @@
 (scroll-bar-mode -1)
 
 ;Activate material theme
-(load-theme 'material
+(load-theme 'wheatgrass
             t)
+
+(set-default-font "Input Mono 12" nil t)
 
 ;Set font
 (custom-set-faces

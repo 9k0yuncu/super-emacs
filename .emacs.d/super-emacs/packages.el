@@ -21,6 +21,8 @@
     theme-looper
     golden-ratio
     turkish))
+    projectile
+    magit))
 
 ;Install required packages
 (mapc (lambda (p)
@@ -71,3 +73,8 @@
 (setq neo-theme 'arrow)
 (neotree)
 (require 'turkish)
+(setq neo-smart-open t)
+
+(golden-ratio-mode 1)
+(projectile-mode 1)
+(setq projectile-switch-project-action 'neotree-projectile-action)
