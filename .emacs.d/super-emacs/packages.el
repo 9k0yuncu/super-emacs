@@ -20,7 +20,7 @@
     myterminal-controls
     theme-looper
     golden-ratio
-    turkish))
+    turkish
     projectile
     magit))
 
@@ -72,9 +72,9 @@
 
 (setq neo-theme 'arrow)
 (neotree)
-(require 'turkish)
 (setq neo-smart-open t)
 
 (golden-ratio-mode 1)
 (projectile-mode 1)
 (setq projectile-switch-project-action 'neotree-projectile-action)
+(require 'turkish)
