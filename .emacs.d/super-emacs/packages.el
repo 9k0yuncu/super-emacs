@@ -19,7 +19,8 @@
     meta-presenter
     myterminal-controls
     theme-looper
-    golden-ratio))
+    golden-ratio
+    turkish))
 
 ;Install required packages
 (mapc (lambda (p)
@@ -69,3 +70,4 @@
 
 (setq neo-theme 'arrow)
 (neotree)
+(require 'turkish)
