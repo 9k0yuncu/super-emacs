@@ -15,14 +15,14 @@
     neotree
     material-theme
     dired-launch
-    which-key
     meta-presenter
     myterminal-controls
-    theme-looper
     golden-ratio
     turkish
     projectile
-    magit))
+    magit
+    markdown-mode
+    zenburn-theme))
 
 ;Install required packages
 (mapc (lambda (p)
@@ -39,9 +39,6 @@
 (add-hook 'dired-mode-hook
           'dired-launch-mode)
 
-;Start which-key-mode
-(which-key-mode)
-
 ;Set up ace-jump-mode
 (autoload 'ace-jump-mode 
   "ace-jump-mode" 
@@ -51,18 +48,6 @@
   "ace-jump-mode" 
   "Ace jump back:-"
   t)
-
-;Configure theme-looper
-(theme-looper-set-theme-set '(deeper-blue
-                              wheatgrass
-                              wombat
-                              material))
-(theme-looper-set-customizations 'powerline-reset)
-
-;Configure myterminal-controls
-(myterminal-controls-set-controls-data
- '(("t" "Change color theme" theme-looper-enable-next-theme)
-   ("r" "Reload file" super-emacs-reload-current-file)))
 
 ;Set up helm-mode
 (helm-mode 1)
@@ -78,3 +63,4 @@
 (projectile-mode 1)
 (setq projectile-switch-project-action 'neotree-projectile-action)
 (require 'turkish)
+(load-theme 'zenburn t)
