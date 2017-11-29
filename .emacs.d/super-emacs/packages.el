@@ -18,11 +18,12 @@
     meta-presenter
     myterminal-controls
     golden-ratio
-    turkish
+;    turkish
     projectile
     magit
     markdown-mode
-    zenburn-theme))
+    zenburn-theme
+    shell-pop))
 
 ;Install required packages
 (mapc (lambda (p)
@@ -57,10 +58,15 @@
 
 (setq neo-theme 'arrow)
 (neotree)
-(setq neo-smart-open t)
+;(setq neo-smart-open t)
 
 (golden-ratio-mode 1)
 (projectile-mode 1)
 (setq projectile-switch-project-action 'neotree-projectile-action)
-(require 'turkish)
-(load-theme 'zenburn t)
+;(require 'turkish)
+
+(require 'shell-pop)
+(setq shell-pop-shell-type (quote ("ansi-term" "*ansi-term*" (lambda nil (ansi-term shell-pop-term-shell)))))
+(setq shell-pop-term-shell "/usr/local/bin/fish")
+(shell-pop--set-shell-type 'shell-pop-shell-type shell-pop-shell-type)
+(global-set-key (kbd "C-x t") 'shell-pop)
